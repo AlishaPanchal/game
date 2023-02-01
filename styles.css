@@ -78,6 +78,7 @@ ul.nav li{
   font-size: 20px
 }
 body {
+  font-family: monaco;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
@@ -88,12 +89,15 @@ table {
   margin-left: auto;
   margin-right: auto;
 }
-th, td {
+th {
   padding: 8px;
+  font-family: lucida handwriting;
 }
 td {
   border: 1px solid;
+  font-family: monaco;
 }
 .choice {
   font-style: italic;
+  font-family: papyrus;
 }
