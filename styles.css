@@ -77,3 +77,23 @@ ul.nav li{
   font-family: lucida handwriting;
   font-size: 20px
 }
+body {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+table {
+  text-align: center;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+th, td {
+  padding: 8px;
+}
+td {
+  border: 1px solid;
+}
+.choice {
+  font-style: italic;
+}
