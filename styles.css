@@ -25,6 +25,7 @@
 h1 {
   text-decoration: underline;
   font-family: lucida handwriting;
+  text-align: center;
 }
 h2 {
   font-family: lucida handwriting;
@@ -34,10 +35,12 @@ h2 {
 h3 {
   font-family: lucida handwriting;
   text-decoration: underline;
+  text-align: center;
 }
 h4 {
   font-family: lucida handwriting;
   text-decoration: underline;
+  text-align: center;
 }
 html {
   background-color: #e7f5fe;
