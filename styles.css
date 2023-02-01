@@ -86,8 +86,10 @@ table {
   margin-left: auto;
   margin-right: auto;
 }
+th, td {
+  padding: 15px;
+}
 th {
-  padding: 10px;
   font-family: lucida handwriting;
 }
 td {
