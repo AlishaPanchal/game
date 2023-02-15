@@ -41,7 +41,7 @@
         which can be seen in Figure 1 below.
         </p>
             <figure>
-                <img src="Board_Game_Pattern.png" alt="Figure 1" width="500" height="800">
+                <img src="Board_Game_Pattern.png" alt="Figure 1" width="500" height="750">
                 <figcaption>Figure 1: Board Game Pattern</figcaption>
             </figure>
         <p>
@@ -75,5 +75,67 @@
         There was a good mix of clarity, innovation, immersion, flow, and fiero.
         </p>
     <h2 id = "video", style="text-align:center;">Exploration #2: 2D Video Game</h2>
+        <p>
+        For the second exploration on game design, we first explored a simple game individually, and then created a game on our own. 
+        My game, the Shoot the Fruit game, is a simple game about clicking the fruit on the screen. But, don't get fooled by the red ball! 
+        The code for my game is written below, as well as an picture of the game setup (Figure 2).
+        </p>
+            <pre>
+from random import randint
+apple = Actor("apple")
+redball = Actor("red_ball")
+global score
+score = 0
+
+def draw():
+    screen.clear()
+    screen.fill("light blue")
+    apple.draw()
+    redball.draw()
+    screen.draw.text("Score: " + str(score), color = "white", topleft = (20,20))
+    
+def place_apple():
+    apple.x = randint(10, 800)
+    apple.y = randint(10, 600)
+
+def place_redball():
+    redball.x = randint(10, 800)
+    redball.y = randint(10, 600)
+
+place_apple()
+place_redball()
+
+def on_mouse_down(pos):
+    if apple.collidepoint(pos):
+        print("Good shot!")
+        place_apple()
+        place_redball()
+    elif redball.collidepoint(pos):
+        print("Not a fruit!")
+        place_redball()
+        place_apple()
+    else:
+        print("You missed!")
+            </pre>
+        <p>
+            Explanation: The first chuck of code sets the two characters, the apple and the red ball, the random placement of the characters, and the score. 
+            The second chuck of code creates the screen, clearing it, making it a light blue color, drawing on the characters, and then creating the scorekeeping text. The third chuck of code places the apple. 
+            This is where the random function from line 1 comes into play. The fourth chuck of code has the same function as the third chuck of code, except this time, it is done for the red ball. 
+            Afterward, the two lines of code place the apple and the red ball on the screen at random places. Finally, the last chuck of code runs the actual game by using an if/elif/else statement group. 
+            The if statement occurs when the player's mouse clicks on the apple, which results in the text "Good shot!" being printed and the placement of the apple and red ball again. 
+            In theory, the score counter should also go up by a certain amount of points. However, due to some reason which I could not resolve, it has been removed from here. 
+            But it can be assumed that if the apple is clicked, the score counter will increase by 1 point. 
+            Next, the elif statement occurs when the red ball is clicked, which results in the text "Not a fruit!" being printed and once again, the placement of the apple and red ball. 
+            Once again, there should be a line of code for the score counter, this time decreasing by a point, but it has been excluded because it led to an error. 
+            Finally, the else statement occurs when neither the apple nor the red ball are clicked, but instead, the light blue background is clicked, resulting in the text "You missed!" being printed. 
+            Again, the score counter line should be included here, this time setting the score back to 0, but it has been excluded.<br></br>
+            One way this game can be improved is by including a game timer, which ends the game after a certain amount of time. The player's goal is to click the apple as many times as possible before the timer runs out. 
+            Another way this game can be improved is by adding more fruits, but also more tricks. For example, a pear and a leaf can be added, as well as an orange and a clownfish or a splatter of orange paint, etc. 
+            All of these additions would bring more challenges to the game, as well as making it more interesting.
+        </p>
+            <figure>
+                <img src="Video_Game_Setup" alt="Figure 2" width="500" height="550">
+                <figcaption>Figure 2: "Shoot the Fruit" Video Game Setup</figcaption>
+            </figure>
     </body>
 </html>
