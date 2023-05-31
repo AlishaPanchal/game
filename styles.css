@@ -26,28 +26,33 @@ h1 {
   text-decoration: underline;
   font-family: lucida handwriting;
   text-align: center;
+  color: red;
 }
 h2 {
   font-family: lucida handwriting;
   text-decoration: underline;
   text-align: center;
+  color: red;
 }
 h3 {
   font-family: lucida handwriting;
   text-decoration: underline;
   text-align: center;
+  color: red;
 }
 h4 {
   font-family: lucida handwriting;
   text-decoration: underline;
   text-align: center;
+  color: red;
 }
 html {
-  background-color: #e7f5fe;
+  background-color: white;
 }
 figcaption {
   text-align: center;
   font-style: italic;
+  color: red;
 }
 img {
   display: block;
